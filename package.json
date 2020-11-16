@@ -1,0 +1,28 @@
+{
+  "name": "freachly-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "mongo:start": "docker run -d --name realworld-mongo -p 27017:27017 mongo",
+    "start": "node ./app.js",
+    "dev": "nodemon ./app.js",
+    "stop": "lsof -ti :3000 | xargs kill",
+    "mongo:stop": "docker stop realworld-mongo && docker rm realworld-mongo"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.10.14",
+    "uuid": "^8.3.1",
+    "express": "^4.17.1",
+    "body-parser": "1.19.0",
+    "cors": "2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
